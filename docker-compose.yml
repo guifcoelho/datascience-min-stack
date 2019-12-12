@@ -1,0 +1,53 @@
+version: '3.5'
+
+services:
+  jupyter:
+    container_name: jupyter
+    build: .
+    image: guifcoelho/jupyter-py3-mysql
+    user: '1000'
+    tty: true
+    restart: unless-stopped
+    volumes:
+      - ./jupyter:/home/jovyan
+    ports:
+      - 8888:8888
+    # depends_on:
+    #   - database
+    # networks: 
+    #   - backend
+
+#   database:
+#     container_name: mariadb-jupyter
+#     image: mariadb:10.3
+#     tty: true
+#     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+#     volumes:
+#       - ./database/dbdata:/var/lib/mysql
+#       - ./database/init:/docker-entrypoint-initdb.d
+#     restart: unless-stopped
+#     environment:
+#       - MYSQL_ROOT_PASSWORD=1234
+#     ports:
+#       - "3306:3306"
+#     networks: 
+#       - backend
+#       - admin
+
+#   admin:
+#     container_name: phpmyadmin
+#     image: phpmyadmin/phpmyadmin
+#     restart: unless-stopped
+#     environment:
+#       - PMA_HOST=database
+#     ports:
+#       - "8080:80"
+#     networks: 
+#       - admin
+#     depends_on:
+#       - database
+
+# networks: 
+#   backend:
+#     driver: bridge
+#   admin:
