@@ -1,4 +1,8 @@
-# Jupyter Notebook no VSCode
+# Datascience Minimum Stack
+
+- Docker, Jupyter, Tensorflow e BigQuery
+
+### Jupyter Notebook no VSCode
 
 - Instale a extensão Python para o VSCode
 - Inicie o container: `docker-compose up -d`
