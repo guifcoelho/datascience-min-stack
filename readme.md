@@ -19,7 +19,7 @@
 
 ```
 
-- Por fim abra o arquivo "jupyter/ML.ipynb" e voilá você agora tem um Jupyter Notebook dentro do VSCode.
+- Por fim abra o arquivo "jupyter/ML.ipynb" e *voilà* você agora tem um Jupyter Notebook dentro do VSCode.
 
 ![](img/notebook.png)
 
